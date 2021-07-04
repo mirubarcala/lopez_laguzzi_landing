@@ -40,7 +40,13 @@ const Header = (props) => {
                 </div>
                 </div>
                 <div id="header-mobile">
-                    <div>logo + Lopez Laguzzi</div>
+                    <div>
+                        <img src={Logo}/>
+                        <span>
+                            <h1>López Laguzzi</h1>
+                            <h2>Constructora</h2>
+                        </span>
+                    </div>
                     <div>
                         <input
                             checked={isMenuOpen}
@@ -56,27 +62,46 @@ const Header = (props) => {
                     </div>
                     {isMenuOpen ? (
                         <nav id="navbar_mobile">
-                            <img src={LogoMenu}/>
-                            <ul className="ul_menu">
+                        <img src={LogoMenu}/>
+                        <ul className="ul_menu">
                         <li
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            obras terminadas
+                            <a>
+                                <div>
+                                <p>01</p>
+                                <span>
+                                    <p>obras</p>
+                                    <p>terminadas</p>
+                                </span>
+                                </div>
+                            </a>
+                            
+                        </li>
+                        <li onClick={() => setIsMenuOpen(false)}
+                        >
+                             <a>
+                                <div>
+                                <p>02</p>
+                                <span>
+                                    <p>obras</p>
+                                    <p>en curso</p>
+                                </span>
+                                </div>
+                            </a>
                         </li>
                         <li onClick={() => setIsMenuOpen(false)}
 
                         >
-                            obras en curso
-                        </li>
-                        <li onClick={() => setIsMenuOpen(false)}
-
-                        >
-                            proyectos futuros
-                        </li>
-                        <li onClick={() => setIsMenuOpen(false)}
-
-                        >
-
+                          <a>
+                                <div>
+                                <p>03</p>
+                                <span>
+                                    <p>proyectos</p>
+                                    <p>futuros</p>
+                                </span>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                         </nav>
