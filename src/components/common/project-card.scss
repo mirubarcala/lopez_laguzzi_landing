@@ -1,0 +1,6 @@
+@import '../../index.scss';
+
+#projectCard {
+    @include card($w: 100%, $h: 33rem);
+
+}

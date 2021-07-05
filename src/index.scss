@@ -27,6 +27,11 @@
     font-family: 'poppins-semibold';
     src: url(./fonts/poppins-semibold.ttf);
 }
+
+@font-face {
+  font-family: 'poppins-medium';
+  src: url(./fonts/poppins-medium.ttf);
+}
   
 // COLORS 
 $orange         :#DD411F;
@@ -209,81 +214,34 @@ $lc: $c,
   }
 }
 
-@mixin switch() {
-    /* The switch - the box around the slider */
-    .switch {
-      position : relative;
-      display  : inline-block;
-      min-width: 3rem;
-      height   : 1.3rem;
-      border   : 0;
-    }
-  
-    /* Hide default HTML checkbox */
-    .switch input {
-      opacity: 0;
-      width  : 0;
-      height : 0;
-    }
-  
-    /* The slider */
-    .slider {
-      position          : absolute;
-      cursor            : pointer;
-      top               : 0;
-      left              : 0;
-      right             : 0;
-      bottom            : 0;
-      background-color  : #ccc;
-      -webkit-transition: 0.4s;
-      transition        : 0.4s;
-    }
-  
-    .slider:before {
-      position        : absolute;
-      content         : "";
-      height          : 1.23rem;
-      width           : 1.23rem;
-      left            : 4px;
-      top             : 1px;
-      background-color: white;
-      transition      : 0.4s;
-    }
-  
-    input:checked+.slider {
-      background-color: $lightBlue;
-    }
-  
-    input:focus+.slider {
-      box-shadow: 0 0 1px $lightBlue;
-    }
-  
-    input:checked+.slider:before {
-      -webkit-transform: translateX(1.1rem);
-      -ms-transform    : translateX(1.1rem);
-      transform        : translateX(1.1rem);
-    }
-  
-    /* Rounded sliders */
-    .slider.round {
-      border-radius: 34px;
-    }
-  
-    .slider.round:before {
-      border-radius: 50%;
-    }
-  }
   
 
-@mixin card($h, $w, $bg: $bone, $br: $corner) {
+@mixin card($h, $w, $bg: $white, $br: $corner) {
     border-radius: $br;
     @extend %shadow;
     background: $bg;
     height    : $h;
     width     : $w;
   }
+
+@mixin compoundTitles($t1: $white, $fs: 32px){
+  font-size: $fs;
+  color: $t1;
+  >h2{
+    opacity: 0.7;
+  }
+}
+
 // EXTENDS 
 
 %shadow {
     box-shadow: 3px 3px 6px $shadow;
   }
+
+%section {
+  background: $dark;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  font-family: 'poppins-regular';
+  color: $white
+}

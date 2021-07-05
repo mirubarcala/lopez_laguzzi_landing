@@ -1,0 +1,21 @@
+@import '../../index.scss';
+
+#finishedProjects{
+    @extend %section;
+    >div{
+        &:nth-child(1){
+            padding: 0rem 0rem 10rem 0rem;
+            >span{
+                @include compoundTitles($fs: 52px);
+                @include phone(){
+                    @include compoundTitles($fs: 32px);
+                }
+            }
+        }
+        &:nth-child(2){
+            width: 100%;
+            @include flexbox($jc: center)
+
+        }
+    }
+}

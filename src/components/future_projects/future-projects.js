@@ -3,7 +3,7 @@ import './future-projects.scss'
 
 const FutureProjects = (props) => {
     return(
-    <div id="future-projects">
+    <div id="futureProjects">
         future projects
     </div>
     )

@@ -1,6 +1,6 @@
 @import '../../index.scss';
 
 #landing{
-    background: $dark;
-    min-height: 100vh;
+   @extend %section;
+   
 }
