@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import './future-projects.scss'
 
-export default class FutureProjects extends Component {
-    render() {
-        return (
-            <div>
-                finished
-            </div>
-        )
-    }
+const FutureProjects = (props) => {
+    return(
+    <div id="future-projects">
+        future projects
+    </div>
+    )
+    
 }
+export default FutureProjects

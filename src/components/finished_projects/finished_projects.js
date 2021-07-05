@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import './finished_projects.scss'
 
-export default class FinishedProjects extends Component {
-    render() {
-        return (
-            <div>
-                finished
-            </div>
-        )
-    }
+const FinishedProjects = (props) => {
+    return(
+    <div id="finished_projects">
+        finished
+    </div>
+    )
+    
 }
+export default FinishedProjects

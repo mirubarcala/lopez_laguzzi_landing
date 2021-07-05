@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './landing.scss'
-export default class Landing extends Component {
-    render() {
-        return (
-            <div id="landing">
-                soy landing
-            </div>
-        )
-    }
+
+const Landing = (props) => {
+    return(
+    <div id="landing">
+        asdasd
+    </div>
+    )
+    
 }
+export default Landing

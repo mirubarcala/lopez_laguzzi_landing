@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import './ongoing-projects.scss'
 
-export default class OngoingProjects extends Component {
-    render() {
-        return (
-            <div>
-                on going
-            </div>
-        )
-    }
+const OngoingProjects = (props) => {
+    return(
+    <div id="ongoing-projects">
+        Ongoing Projects
+    </div>
+    )
+    
 }
+export default OngoingProjects
