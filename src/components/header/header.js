@@ -1,11 +1,12 @@
 
 import React, { useState } from "react";
 import './header.scss'
+import { Link } from "react-router-dom"
 import Logo from '../../img/logo.png'
 import LogoMenu from '../../img/logo-menu.png'
 
 
-const Header = (props) => {
+const Header = ({children}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isSelected, setIsSelected] = useState(false)
     return(
@@ -13,39 +14,41 @@ const Header = (props) => {
             <div id="header-desktop">
                 <div>
                     <div>
-                        <img src={Logo}/>
-                        <span>
-                            <h1>López Laguzzi</h1>
-                            <h2>Constructora</h2>
-                        </span>
-
-
+                    <Link to="/">
+                            <img src={Logo}/>
+                            <span>
+                                <h1>López Laguzzi</h1>
+                                <h2>Constructora</h2>
+                            </span>
+                       </Link>
                     </div>
                     <div>
-                        <a onClick={() => (window.location.href = "/obras-terminadas")}>
+                        <Link to="obras-finalizadas">
                             <p>Obras terminadas</p>
                             <span></span>
-                        </a>
-                        <a>
+                        </Link>
+                        <Link to="obras-en-curso">
                             <p>Obras en curso</p>
                             <span></span>
-                        </a>
-                        <a>
+                        </Link>
+                        <Link to="proyectos-futuros">
                             <p>Proyectos futuros</p>
                             <span></span>
 
-                        </a>
+                        </Link>
 
                     </div>
                 </div>
                 </div>
                 <div id="header-mobile">
                     <div>
-                        <img src={Logo}/>
-                        <span>
-                            <h1>López Laguzzi</h1>
-                            <h2>Constructora</h2>
-                        </span>
+                       <Link to="/">
+                            <img src={Logo}/>
+                            <span>
+                                <h1>López Laguzzi</h1>
+                                <h2>Constructora</h2>
+                            </span>
+                       </Link>
                     </div>
                     <div>
                         <input
@@ -67,7 +70,7 @@ const Header = (props) => {
                         <li
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            <a>
+                            <Link to="obras-finalizadas">
                                 <div>
                                 <p>01</p>
                                 <span>
@@ -75,12 +78,12 @@ const Header = (props) => {
                                     <p>terminadas</p>
                                 </span>
                                 </div>
-                            </a>
+                            </Link>
                             
                         </li>
                         <li onClick={() => setIsMenuOpen(false)}
                         >
-                             <a>
+                             <Link to="obras-en-curso">
                                 <div>
                                 <p>02</p>
                                 <span>
@@ -88,12 +91,12 @@ const Header = (props) => {
                                     <p>en curso</p>
                                 </span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                         <li onClick={() => setIsMenuOpen(false)}
 
                         >
-                          <a>
+                            <Link to="proyectos-futuros">
                                 <div>
                                 <p>03</p>
                                 <span>
@@ -101,7 +104,7 @@ const Header = (props) => {
                                     <p>futuros</p>
                                 </span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                         </nav>
@@ -109,6 +112,7 @@ const Header = (props) => {
                     }
  
                 </div>
+                {children}
             </div>
     )
 }

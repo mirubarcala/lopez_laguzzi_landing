@@ -19,20 +19,27 @@
 
     >div{
         &:nth-child(1){
-            @include flexbox($dir: row);
-            >img{
-                width: 3.5rem;
-                height: 3.5rem;
+            >a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 100%;
+                >img{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                }
+                >span{
+                    @include flexbox();
+                    >h1{
+                        font-family: 'mukta-semibold';
+                        font-size: 18px;
+                    }
+                    >h2{
+                        font-family: 'mukta-light';
+                        font-size: 12px;
+                    }
+                } 
             }
-            >span{
-                @include flexbox();
-                >h1{
-                    font-family: 'mukta-semibold';
-                }
-                >h2{
-                    font-family: 'mukta-light';
-                }
-            } 
         }
         &:nth-child(2){
             @include flexbox($dir: row);
@@ -71,24 +78,28 @@
         color: $white;
         >div{
             &:nth-child(1){
-                @include flexbox($dir: row);
-                >img{
-                    width: 3.5rem;
-                    height: 3.5rem;
+                >a{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 100%;
+                    >img{
+                        width: 3.5rem;
+                        height: 3.5rem;
+                    }
+                    >span{
+                        @include flexbox();
+                        >h1{
+                            font-family: 'mukta-semibold';
+                            font-size: 18px;
+                        }
+                        >h2{
+                            font-family: 'mukta-light';
+                            font-size: 12px;
+
+                        }
+                    } 
                 }
-                >span{
-                    @include flexbox();
-                    >h1{
-                        font-family: 'mukta-semibold';
-                        font-size: 18px;
-                    }
-                    >h2{
-                        font-family: 'mukta-light';
-                        font-size: 12px;
-
-                    }
-                } 
-
             }
             &:nth-child(2){
                 .burguer {

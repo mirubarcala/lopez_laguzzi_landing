@@ -4,7 +4,7 @@ export default class Landing extends Component {
     render() {
         return (
             <div id="landing">
-                
+                soy landing
             </div>
         )
     }
