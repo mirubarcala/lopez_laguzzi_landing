@@ -23,7 +23,7 @@ const Header = (props) => {
                     </div>
                     <div>
                         <a onClick={() => (window.location.href = "/obras-terminadas")}>
-                            <p className="selected">Obras terminadas</p>
+                            <p>Obras terminadas</p>
                             <span></span>
                         </a>
                         <a>
