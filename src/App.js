@@ -11,14 +11,14 @@ import Landing from "./components/landing/landing"
 import FinishedProjects from "./components/finished_projects/finished_projects"
 import OngoingProjects from "./components/ongoing_projects/ongoing-projects"
 import FutureProjects from "./components/future_projects/future-projects"
-
-
+import Cursor from "./components/cursor/cursor"
 
 
 export default class App extends Component {
   render() {
     return (
         <Router>
+          <Cursor/>
           <div>
             <LayoutRoute path="/" exact component={Landing} layout={Header} />        
             <LayoutRoute path="/obras-finalizadas" exact component={FinishedProjects} layout={Header} />

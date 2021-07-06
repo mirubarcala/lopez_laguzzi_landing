@@ -245,3 +245,11 @@ $lc: $c,
   font-family: 'poppins-regular';
   color: $white
 }
+
+
+html,body {
+  cursor: none
+}
+html *,body * {
+  cursor: none;
+}
